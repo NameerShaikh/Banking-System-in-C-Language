@@ -59,16 +59,7 @@ switch(opt)
 	case 2 :
 		if(login==1)
 		{
-		/*printf("\nEnter your mobile number");
-		scanf("%lf",&emobile);
-
-		if(emobile==mobile)
-		{
-			printf("Enter PIN");
-			scanf("%d",&epin);
-			if(epin==pin)
-			{
-			    */	printf("Enter amount to deposit : ");
+			printf("Enter amount to deposit : ");
 				scanf("%d",&deposit);
 				balance=balance+deposit;
 				printf("\n%d has been successfully deposited to your account.",deposit);
@@ -81,30 +72,11 @@ switch(opt)
 			printf("\nFirst you need to login");
 			goto start;
 		 }
-		    /*	}
-			else
-			{
-				printf("\nYou have entered Incorect pin");
-				goto start;
-			}
-		}
-		else
-		{
-			printf("\nYou have entered incorrect mobile number.");
-			goto start;
-		}  */
+		   
 	case 3 :
 		if(login==1)
 		{
-	      /*	printf("\nEnter mobile number : ");
-		scanf("%lf",&emobile);
-		if(emobile==mobile)
-		{
-			printf("\nEnter PIN : ");
-			scanf("%d",&epin);
-			if(epin==pin)
-			{
-			   */	printf("\nEnter amount you want to withdraw : ");
+	      	printf("\nEnter amount you want to withdraw : ");
 				scanf("%d",&withdraw);
 				balance=balance-withdraw;
 				if(balance>0)
@@ -124,31 +96,12 @@ switch(opt)
 			printf("\nFirst you need to login");
 			goto start;
 		 }
-		     /*	}
-			else
-			{
-				printf("\nYou have entered incorrect pin.");
-				goto start;
-			}
-		}
-		else
-		{
-			printf("\nYou have entered incorrect mobile number.");
-			goto start;
-		}      */
+		   
 	case 4 :
 		if(login==1)
 		{
 
-	      /*	printf("\nEnter mobile number : ");
-		scanf("%lf",&emobile);
-		if(emobile==mobile)
-		{
-			printf("\nEnter PIN : ");
-			scanf("%d",&epin);
-			if(epin==pin)
-			{
-		*/		printf("\nAvailable balance = %d",balance);
+	      	printf("\nAvailable balance = %d",balance);
 				goto start;
 			}
 		   else
@@ -156,30 +109,12 @@ switch(opt)
 			printf("\nFirst you need to login");
 			goto start;
 		 }
-		  /*	else
-			{
-				printf("\nYou have entered incorrect PIN.");
-				goto start;
-			}
-		}
-		else
-		{
-			printf("\nYou have entered incorrect mobile number.");
-			goto start;
-		}  */
+		 
 
 	case 5 :
 		if(login==1)
 		{
-	       /*	printf("\nEnter mobile number : ");
-		scanf("%lf",&emobile);
-		if(emobile==mobile)
-		{
-			printf("Enter PIN : ");
-			scanf("%d",&epin);
-			if(epin==pin)
-			{
-		 */		printf("Name : %s",name);
+	      		printf("Name : %s",name);
 				printf("\nAGe : %d",age);
 				printf("\nMobile Number : %lf",mobile);
 				printf("\nPIN : %d",pin);
@@ -191,18 +126,7 @@ switch(opt)
 			printf("\nFirst you need to login");
 			goto start;
 		 }
-		    /*	}
-			else
-			{
-				printf("\nYou have entered incorrect PIN.");
-				goto start;
-			}
-		}
-		else
-		{
-			printf("\nYou have entered incorrect mobile number.");
-			goto start;
-		}*/
+		   
 	case 6 :
 		goto end;
 }
