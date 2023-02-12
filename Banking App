@@ -1,0 +1,212 @@
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int opt,pin=0,epin,age,balance=0,deposit=0,withdraw=0,login;
+char name[50];
+long double mobile=0,emobile=0,temp;
+clrscr();
+
+start:
+printf("\n");
+printf("\nLogin-0\nNew Account-1\nDeposit-2\nWithdraw-3\nBalance Statement-4\nAccount Details-5\nExit-6\n\nEnter your choice : \t");
+scanf("%d",&opt);
+printf("\n");
+switch(opt)
+{
+
+
+
+
+	case 0 :
+		printf("\nEnter mobile number : ");
+		scanf("%lf",&emobile);
+		if(emobile==mobile)
+		{
+			printf("\nEnter PIN : ");
+			scanf("%d",&epin);
+			if(epin==pin)
+			{
+				login=1;
+				printf("\nLogin Successful!");
+				goto start;
+			}
+			else
+			{
+				printf("\nYou have entered Incorect pin");
+				goto start;
+			}
+		}
+		else
+		{
+			printf("\nYou have entered incorrect mobile number.");
+			goto start;
+		}
+	case 1 :
+		printf("\nEnter full name : ");
+		scanf("%s",&name);
+		printf("Please enter your age : ");
+		scanf("%d",&age);
+		printf("Please enter mobile number : ");
+		scanf("%lf",&mobile);
+		printf("Please set your 4 digit PIN : ");
+		scanf("%d",&pin);
+		printf("Enter initial balance : ");
+		scanf("%d",&balance);
+		printf("Congratulations! Your account has been created.\n");
+		goto start;
+	case 2 :
+		if(login==1)
+		{
+		/*printf("\nEnter your mobile number");
+		scanf("%lf",&emobile);
+
+		if(emobile==mobile)
+		{
+			printf("Enter PIN");
+			scanf("%d",&epin);
+			if(epin==pin)
+			{
+			    */	printf("Enter amount to deposit : ");
+				scanf("%d",&deposit);
+				balance=balance+deposit;
+				printf("\n%d has been successfully deposited to your account.",deposit);
+				printf("\nAvailable Balance = %d",balance);
+			goto start;
+		 }
+
+		 else
+		 {
+			printf("\nFirst you need to login");
+			goto start;
+		 }
+		    /*	}
+			else
+			{
+				printf("\nYou have entered Incorect pin");
+				goto start;
+			}
+		}
+		else
+		{
+			printf("\nYou have entered incorrect mobile number.");
+			goto start;
+		}  */
+	case 3 :
+		if(login==1)
+		{
+	      /*	printf("\nEnter mobile number : ");
+		scanf("%lf",&emobile);
+		if(emobile==mobile)
+		{
+			printf("\nEnter PIN : ");
+			scanf("%d",&epin);
+			if(epin==pin)
+			{
+			   */	printf("\nEnter amount you want to withdraw : ");
+				scanf("%d",&withdraw);
+				balance=balance-withdraw;
+				if(balance>0)
+				{
+					printf("\n%d Amount successfully withdrawn.",withdraw);
+					printf("\nAvailable balance = %d",balance);
+					goto start;
+				}
+				else
+				{
+				printf("\nYou have insufficient balance.");
+				goto start;
+				}
+		     }
+		      else
+		 {
+			printf("\nFirst you need to login");
+			goto start;
+		 }
+		     /*	}
+			else
+			{
+				printf("\nYou have entered incorrect pin.");
+				goto start;
+			}
+		}
+		else
+		{
+			printf("\nYou have entered incorrect mobile number.");
+			goto start;
+		}      */
+	case 4 :
+		if(login==1)
+		{
+
+	      /*	printf("\nEnter mobile number : ");
+		scanf("%lf",&emobile);
+		if(emobile==mobile)
+		{
+			printf("\nEnter PIN : ");
+			scanf("%d",&epin);
+			if(epin==pin)
+			{
+		*/		printf("\nAvailable balance = %d",balance);
+				goto start;
+			}
+		   else
+		 {
+			printf("\nFirst you need to login");
+			goto start;
+		 }
+		  /*	else
+			{
+				printf("\nYou have entered incorrect PIN.");
+				goto start;
+			}
+		}
+		else
+		{
+			printf("\nYou have entered incorrect mobile number.");
+			goto start;
+		}  */
+
+	case 5 :
+		if(login==1)
+		{
+	       /*	printf("\nEnter mobile number : ");
+		scanf("%lf",&emobile);
+		if(emobile==mobile)
+		{
+			printf("Enter PIN : ");
+			scanf("%d",&epin);
+			if(epin==pin)
+			{
+		 */		printf("Name : %s",name);
+				printf("\nAGe : %d",age);
+				printf("\nMobile Number : %lf",mobile);
+				printf("\nPIN : %d",pin);
+				printf("\nAvailable Balance : %d",balance);
+				goto start;
+		    }
+		     else
+		 {
+			printf("\nFirst you need to login");
+			goto start;
+		 }
+		    /*	}
+			else
+			{
+				printf("\nYou have entered incorrect PIN.");
+				goto start;
+			}
+		}
+		else
+		{
+			printf("\nYou have entered incorrect mobile number.");
+			goto start;
+		}*/
+	case 6 :
+		goto end;
+}
+
+end:
+getch();
+}
